@@ -16,3 +16,5 @@ uvicorn src.app:app
 In your browser, go to http://127.0.0.1:8000/api/v1/sample_endpoint. You should see the following output
 `{"message":"Success"}`
 
+The URL http://127.0.0.1:8000/management/health will produce the output `{"status":"UP"}`
+
