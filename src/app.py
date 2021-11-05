@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from .configs.containers import Container
-from .controllers import api
+from .controllers import api, management
 
 import logging
 
@@ -18,6 +18,7 @@ def create_app() -> FastAPI:
     application.container = container
 
     application.include_router(api.api_router)
+    application.include_router(management.management_router)
 
     return application
 
